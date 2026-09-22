@@ -27,10 +27,6 @@ class AppServiceProvider extends ServiceProvider
             CacheInterface::class,
             LaravelCache::class
         );
-        $this->app->bind(
-            NotificationRepositoryInterface::class,
-            NotificationRepository::class
-        );
     }
 
     /**
