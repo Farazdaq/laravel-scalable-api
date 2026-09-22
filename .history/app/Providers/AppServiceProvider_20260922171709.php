@@ -8,7 +8,7 @@ use App\Infrastructure\Persistence\Repositories\EmailRepository;
 use App\Domain\Interfaces\CacheInterface;
 use App\Infrastructure\Cache\LaravelCache;
 use App\Domain\Interfaces\NotificationRepositoryInterface;
-use App\Infrastructure\Persistence\Repositories\NotificationRepository;
+use App\Infrastructure\Persistence\Repositories\NotificationRepository
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,10 +26,6 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(
             CacheInterface::class,
             LaravelCache::class
-        );
-        $this->app->bind(
-            NotificationRepositoryInterface::class,
-            NotificationRepository::class
         );
     }
 
