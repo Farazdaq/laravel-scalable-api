@@ -3,8 +3,6 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Domain\Interfaces\EmailRepositoryInterface;
-use App\Infrastructure\Persistence\Repositories\EmailRepository;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -15,10 +13,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind(
-            EmailRepositoryInterface::class,
-            EmailRepository::class
-        );
+        //
     }
 
     /**
