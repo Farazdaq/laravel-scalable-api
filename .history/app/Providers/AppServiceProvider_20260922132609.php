@@ -5,8 +5,6 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Domain\Interfaces\EmailRepositoryInterface;
 use App\Infrastructure\Persistence\Repositories\EmailRepository;
-use App\Domain\Interfaces\CacheInterface;
-use App\Infrastructure\Cache\LaravelCache;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -17,14 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind(
-            EmailRepositoryInterface::class,
-            EmailRepository::class
-        );
-        $this->app->bind(
-            CacheInterface::class,
-            LaravelCache::class
-        );
+        //
     }
 
     /**

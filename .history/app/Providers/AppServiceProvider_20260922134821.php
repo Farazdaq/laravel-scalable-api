@@ -21,10 +21,6 @@ class AppServiceProvider extends ServiceProvider
             EmailRepositoryInterface::class,
             EmailRepository::class
         );
-        $this->app->bind(
-            CacheInterface::class,
-            LaravelCache::class
-        );
     }
 
     /**
